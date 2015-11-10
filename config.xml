@@ -3,6 +3,7 @@
   <description>INTERNATIONAL ASSOCIATION FOR SCIENTIFIC SPIRITUALISM</description>
   <author href="http://apinfotek.in" email="support@apinfotek.in">A P Infotek</author>
   <content src="index.html"/>
+  <access origin="http://lazykirana.com/lazy/mobile2/" subdomains="true" browserOnly="false" /> 
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
@@ -62,7 +63,7 @@
   <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024"/>
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
-  <access origin="*"/>
+  
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>

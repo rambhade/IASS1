@@ -30,10 +30,22 @@
         <title>IASS</title>
     </head>
     <body>
-	
-	<div style="box-sizing:border-box;width:100%;height:100%;">
-    <iframe src="http://iass.info/" border="0" style="position: absolute;border:0px;width:100%;height:100%;"></iframe>
-	</div>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });
+    }
+
+    </script>
     <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();

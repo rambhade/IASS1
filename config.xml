@@ -3,7 +3,8 @@
   <description>INTERNATIONAL ASSOCIATION FOR SCIENTIFIC SPIRITUALISM</description>
   <author href="http://apinfotek.in" email="support@apinfotek.in">A P Infotek</author>
   <content src="index.html"/>
-  <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+  <access origin="http://127.0.0.1*"/>
+<access origin="http://phonegap.com" subdomains="true" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>

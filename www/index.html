@@ -31,6 +31,7 @@
         <title>IASS</title>
     </head>
     <body>
+	<a id="ext-link" href="#">Google it</a>
     <script type="text/javascript" charset="utf-8">
 $.ajax({
    url: "/test.php",
@@ -38,7 +39,18 @@ $.ajax({
       $("#results").html(x);
    }
 });
+
+$("#ext-link").on("click"), function() {
+    if (typeof navigator !== "undefined" && navigator.app) {
+        // Mobile device.
+        navigator.app.loadUrl('http://www.google.com/', {openExternal: true});
+    } else {
+        // Possible web browser
+        window.open("http://www.google.com/", "_blank");
+    }
+});
     </script>
+	
 	<div id="ajax"></div>
     <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">

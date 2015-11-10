@@ -33,11 +33,10 @@
     <body>
     <script type="text/javascript" charset="utf-8">
 $.ajax({
-  dataType:'html',
-  url:'http://www.google.co.in',
-  success:function(data) {
-    $('#ajax').html($(data).children());   
-  }
+   url: "/test.php",
+   success: function(x){
+      $("#results").html(x);
+   }
 });
     </script>
 	<div id="ajax"></div>

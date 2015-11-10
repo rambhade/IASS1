@@ -21,6 +21,7 @@
 -->
 <html>
     <head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -31,21 +32,15 @@
     </head>
     <body>
     <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-         var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-         ref.addEventListener('exit', function() { alert(event.type); });
-    }
-
+$.ajax({
+  dataType:'html',
+  url:'http://www.google.co.in',
+  success:function(data) {
+    $('#ajax').html($(data).children());   
+  }
+});
     </script>
+	<div id="ajax"></div>
     <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
